@@ -1,5 +1,4 @@
 angular.module('notes.home', [])
+  .controller('HomeController', function($scope) {
 
-.controller('HomeController', function($scope) {
-  
-});
+  });

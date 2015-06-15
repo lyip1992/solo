@@ -7,9 +7,8 @@ angular.module('notes', [
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'app/home/home.html', // need to implement a basic webserver to make this work
+      templateUrl: 'app/home/home.html',
       controller: 'HomeController'
     });
 
-    $urlRouterProvider.otherwise('/');
 });
