@@ -7,8 +7,9 @@ angular.module('notes', [
     .state('home', {
       url: '/',
       templateUrl: 'app/home/home.html',
-      controller: 'app/home/home.js'
+      controller: 'HomeController'
     });
 
     // maybe add an otherwise statement here
+    $urlRouterProvider.otherwise('/');
 });
