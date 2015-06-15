@@ -3,13 +3,13 @@ angular.module('notes', [
   'ui.router'
 ])
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'app/home/home.html',
+      templateUrl: 'app/home/home.html', // need to implement a basic webserver to make this work
       controller: 'HomeController'
     });
 
-    // maybe add an otherwise statement here
     $urlRouterProvider.otherwise('/');
 });
