@@ -2,15 +2,19 @@
 
   <form class="form-horizontal">
 
-    Title: <input type="text" ng-model="noteTitle" autofocus ng-model-instant>
-    Note: <input type="text" ng-model="noteText" ng-model-instant>
     <button class="btn" ng-click="addNote()">Add a Note</button>
+
+    Title: <input type="text" ng-model="note.title" placeholder="Enter Title" ng-change="list.$save(note)" ng-model-instant>
+    Note: <input type="text" ng-model="note.text" placeholder="Enter Text" ng-change="list.$save(note)" ng-model-instant>
 
   </form>
 
   <ul class="list-unstyled">
 
-    <li ng-click="remove($index)" ng-repeat="note in list">{{ note.title }}: {{ note.text }}</li>
+    <li ng-click="edit(note)" ng-repeat="note in list">
+      <div>{{ note.title }}</div>
+      <div>{{ note.text }}</div>
+    </li>
 
   </ul>
 

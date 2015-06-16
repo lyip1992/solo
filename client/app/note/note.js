@@ -4,15 +4,14 @@ angular.module('notes.note', [])
       $scope.list = Shared;
 
       $scope.addNote = function () {
-        if( $scope.noteTitle && $scope.noteText ) {
-          $scope.list.$add({ title: $scope.noteTitle, text: $scope.noteText });
-          $scope.noteTitle = '';
-          $scope.noteText = '';
-        }
+        $scope.list.$add({ title: 'Temporary title', text: 'Temporary text' });
       };
 
-      $scope.remove = function(index) {
-        $scope.list.$remove(index);
+      $scope.edit = function (note) {
+        var key = note.$id;
+        var record = $scope.list.$getRecord(key);
+
+        $scope.note = record;
       };
 
     }
