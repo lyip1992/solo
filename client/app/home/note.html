@@ -1,1 +1,10 @@
-<div>Dis is da note yo!</div>
+<div ng-controller="HomeController">
+
+  <form class="notes">
+    <input type="text" ng-model="noteText" ng-model-instant>
+    <button class="btn" ng-click="addNote()">Add</button>
+  </form>
+
+</div>
+
+<!-- ng-model-instant instantly updates the note model -->
