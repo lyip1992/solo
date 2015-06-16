@@ -1,9 +1,8 @@
 angular.module('notes.home', [])
-  .controller('HomeController', function($scope) {
-    $scope.notes = [];
+  .controller('HomeController', function($scope, Shared) {
 
     $scope.addNote = function() {
-      $scope.notes.push({text: $scope.noteText });
+      Shared.addNote($scope.noteText);
     };
 
 
