@@ -1,5 +1,9 @@
 <div ng-controller="ListController">
-  <ul class="unstyled">
-    <li ng-repeat="note in list()">{{ note.text }}</li>
+
+  <ul class="list-unstyled">
+
+    <li ng-repeat="note in list()">{{ note.title }}: {{ note.text }}</li>
+
   </ul>
+
 </div>

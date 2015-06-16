@@ -1,10 +1,14 @@
 <div ng-controller="NoteController">
 
-  <form class="notes">
+  <form class="form-horizontal">
+
+    <input type="text" ng-model="noteTitle" ng-model-instant>
     <input type="text" ng-model="noteText" ng-model-instant>
-    <button class="btn" ng-click="addNote()">Add</button>
+    <button class="btn" ng-click="addNote()">Add a Note</button>
+
   </form>
 
 </div>
 
-<!-- ng-model-instant instantly updates the note model -->
+
+<!-- Save a note every time a key is pressed -->
