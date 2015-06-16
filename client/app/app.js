@@ -5,7 +5,7 @@ angular.module('notes', [
   'notes.services',
   'ui.router'
 ])
-.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+.config(function($stateProvider) { // $urlRouterProvider, $httpProvider
   $stateProvider
     .state('home', {
       url: '',
