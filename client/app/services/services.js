@@ -1,13 +1,19 @@
+
 angular.module('notes.services', [])
 
-  .factory('Shared', function() {
-    var notes = [
-      { title: 'Note 1', text: 'I am a note' },
-      { title: 'Note 2', text: 'I am another note' }
-    ];
+  .factory('Shared', function() { // implement firebase here
+
+    var dataStore = new Firebase('https://glowing-torch-6026.firebaseio.com/');
+
+    dataStore.on('child_added', function(snapshot) {
+      var note = snapshot.val();
+      notes.push({ title: note.title, text: note.text });
+    });
+
+    var notes = []; // need a way to show all messages before
 
     var addNote = function(title, note) {
-      notes.push({ title: title, text: note });
+      dataStore.push({ title: title, text: note }); // this push is working right now
     };
 
     var list = function() {
