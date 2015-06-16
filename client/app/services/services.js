@@ -1,7 +1,10 @@
 angular.module('notes.services', [])
 
   .factory('Shared', function() {
-    var notes = [];
+    var notes = [
+      { text: 'I am a note' },
+      { text: 'I am another note' }
+    ];
 
     var addNote = function(note) {
       notes.push({ text: note });
