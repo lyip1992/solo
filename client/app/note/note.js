@@ -1,12 +1,14 @@
 angular.module('notes.note', [])
-  .controller('NoteController', function($scope, Shared) {
+  .controller('NoteController', ['$scope', 'Shared',
+    function($scope, Shared) {
+      $scope.list = Shared;
 
-    $scope.addNote = function() {
-      if( $scope.noteTitle && $scope.noteText ) {
-        Shared.addNote($scope.noteTitle, $scope.noteText);
-        $scope.noteTitle = '';
-        $scope.noteText = '';
-      }
-    };
-
-  });
+      $scope.addNote = function () {
+        if( $scope.noteTitle && $scope.noteText ) {
+          $scope.list.$add({ title: $scope.noteTitle, text: $scope.noteText });
+          $scope.noteTitle = '';
+          $scope.noteText = '';
+        }
+      };
+    }
+  ]);
