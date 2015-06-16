@@ -8,8 +8,8 @@ angular.module('notes', [
     .state('home', {
       url: '',
       views: {
-        'home': {
-          templateUrl: 'app/home/home.html',
+        'note': {
+          templateUrl: 'app/home/note.html',
           controller: 'HomeController'
         }
       }
