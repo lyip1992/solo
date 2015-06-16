@@ -1,4 +1,5 @@
 angular.module('notes', [
+  'firebase',
   'notes.list',
   'notes.note',
   'notes.services',
