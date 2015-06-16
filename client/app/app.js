@@ -7,8 +7,11 @@ angular.module('notes', [
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'app/home/home.html',
-      controller: 'HomeController'
+      views: {
+        'home': {
+          templateUrl: 'app/home/home.html',
+          controller: 'HomeController'
+        }
+      }
     });
-
 });
