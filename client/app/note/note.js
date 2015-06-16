@@ -3,7 +3,7 @@ angular.module('notes.note', [])
 
     $scope.addNote = function() {
       Shared.addNote($scope.noteText);
+      $scope.noteText = '';
     };
-
 
   });

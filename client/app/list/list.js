@@ -5,6 +5,4 @@ angular.module('notes.list', [])
       return Shared.list();
     };
 
-
-
   });
