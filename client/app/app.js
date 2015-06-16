@@ -6,7 +6,7 @@ angular.module('notes', [
 
   $stateProvider
     .state('home', {
-      url: '/',
+      url: '',
       views: {
         'home': {
           templateUrl: 'app/home/home.html',
