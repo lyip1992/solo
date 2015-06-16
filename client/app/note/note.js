@@ -10,5 +10,10 @@ angular.module('notes.note', [])
           $scope.noteText = '';
         }
       };
+
+      $scope.remove = function(index) {
+        $scope.list.$remove(index);
+      };
+
     }
   ]);

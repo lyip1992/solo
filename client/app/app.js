@@ -1,6 +1,5 @@
 angular.module('notes', [
   'firebase',
-  'notes.list',
   'notes.note',
   'notes.services',
   'ui.router'
@@ -10,10 +9,6 @@ angular.module('notes', [
     .state('home', {
       url: '',
       views: {
-        'list': {
-          templateUrl: 'app/list/list.html',
-          controller: 'ListController'
-        },
         'note': {
           templateUrl: 'app/note/note.html',
           controller: 'NoteController'

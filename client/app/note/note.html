@@ -8,4 +8,10 @@
 
   </form>
 
+  <ul class="list-unstyled">
+
+    <li ng-click="remove($index)" ng-repeat="note in list">{{ note.title }}: {{ note.text }}</li>
+
+  </ul>
+
 </div>
