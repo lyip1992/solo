@@ -1,5 +1,6 @@
 angular.module('notes', [
-  'notes.home',
+  'notes.list',
+  'notes.note',
   'notes.services',
   'ui.router'
 ])
@@ -8,24 +9,24 @@ angular.module('notes', [
     .state('home', {
       url: '',
       views: {
-        'search': {
-          templateUrl: 'app/home/search.html',
-          controller: 'HomeController'
-        },
-
-        'nav': {
-          templateUrl: 'app/home/nav.html',
-          controller: 'HomeController'
-        },
-
         'list': {
-          templateUrl: 'app/home/list.html',
-          controller: 'HomeController'
+          templateUrl: 'app/list/list.html',
+          controller: 'ListController'
         },
         'note': {
-          templateUrl: 'app/home/note.html',
-          controller: 'HomeController'
+          templateUrl: 'app/note/note.html',
+          controller: 'NoteController'
         }
+        
+        // 'search': {
+        //   templateUrl: 'app/home/search.html',
+        //   controller: 'HomeController'
+        // },
+        //
+        // 'nav': {
+        //   templateUrl: 'app/home/nav.html',
+        //   controller: 'HomeController'
+        // },
       }
     });
 });
