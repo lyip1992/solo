@@ -16,8 +16,16 @@
 
   <body>
 
-    <div ui-view="note"></div>
-    
+    <div>
+      <div class="search-nav" ui-view="search"></div>
+      <div class="search-nav"ui-view="nav"></div>
+    </div>
+
+    <div>
+      <div class="list-note"ui-view="list"></div>
+      <div class="list-note"ui-view="note"></div>
+    </div>
+
   </body>
 
 </html>

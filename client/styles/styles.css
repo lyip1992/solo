@@ -1,0 +1,15 @@
+/*.search .nav {
+  display: inline-block;
+}
+
+.list .note {
+  display: inline-block;
+}*/
+
+.search-nav {
+  display: inline-block;
+}
+
+.list-note {
+  display: inline-block;
+}
