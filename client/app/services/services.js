@@ -1,7 +1,6 @@
-
 angular.module('notes.services', [])
 
-  .factory('Shared', function() { // implement firebase here
+  .factory('Shared', function() {
 
     var dataStore = new Firebase('https://glowing-torch-6026.firebaseio.com/');
 
@@ -10,15 +9,13 @@ angular.module('notes.services', [])
       notes.push({ title: note.title, text: note.text });
     });
 
-    var notes = []; // need a way to show all messages before
+    var notes = [];
 
     var addNote = function(title, note) {
-      dataStore.push({ title: title, text: note }); // this push is working right now
+      dataStore.push({ title: title, text: note });
     };
 
-    var list = function() {
-      return notes;
-    };
+    var list = function() { return notes; };
 
     return {
       addNote: addNote,
