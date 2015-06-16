@@ -17,16 +17,6 @@ angular.module('notes', [
           templateUrl: 'app/note/note.html',
           controller: 'NoteController'
         }
-        
-        // 'search': {
-        //   templateUrl: 'app/home/search.html',
-        //   controller: 'HomeController'
-        // },
-        //
-        // 'nav': {
-        //   templateUrl: 'app/home/nav.html',
-        //   controller: 'HomeController'
-        // },
       }
     });
 });

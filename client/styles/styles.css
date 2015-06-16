@@ -1,15 +1,7 @@
-/*.search .nav {
-  display: inline-block;
+.note {
+  margin: 20px;
 }
 
-.list .note {
-  display: inline-block;
-}*/
-
-.search-nav {
-  display: inline-block;
-}
-
-.list-note {
-  display: inline-block;
+.list {
+  margin: 20px;
 }
