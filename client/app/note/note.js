@@ -2,8 +2,10 @@ angular.module('notes.note', [])
   .controller('NoteController', function($scope, Shared) {
 
     $scope.addNote = function() {
-      Shared.addNote($scope.noteText);
-      $scope.noteText = '';
+      if( $scope.noteText ) {
+        Shared.addNote($scope.noteText);
+        $scope.noteText = '';
+      }
     };
 
   });
