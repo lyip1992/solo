@@ -19,5 +19,9 @@ input {
 }
 
 li {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin-left: 25px;
 }

@@ -8,6 +8,7 @@
 
       <li ng-click="edit(note)" ng-repeat="note in list">
         <div>{{ note.title }}</div>
+        <div class="listText">{{ note.text.substr(0,40); }}</div>
       </li>
 
     </ul>
