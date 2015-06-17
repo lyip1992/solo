@@ -7,8 +7,10 @@
     <ul class="list-unstyled">
 
       <li ng-click="edit(note)" ng-repeat="note in list">
+
         <div>{{ note.title }}</div>
-        <div class="listText">{{ note.text.substr(0,40); }}</div>
+        <div>{{ note.text.substr(0,50); }}</div>
+
       </li>
 
     </ul>
@@ -17,21 +19,22 @@
 
   <div class="col-md-8">
 
-    <form class="">
+    <form>
 
       <div class="noteTitle">
+
         Title: <input type="text" ng-model="note.title" placeholder="Enter Title" ng-change="list.$save(note)" ng-model-instant>
+
       </div>
 
       <div class="noteText">
-        <textarea cols="125" rows="32" type="text" ng-model="note.text" placeholder="Enter Text" ng-change="list.$save(note)" ng-model-instant></textarea>
-      </div>
 
+        <textarea cols="125" rows="32" type="text" ng-model="note.text" placeholder="Enter Text" ng-change="list.$save(note)" ng-model-instant></textarea>
+
+      </div>
 
     </form>
 
   </div>
-
-
 
 </div>
