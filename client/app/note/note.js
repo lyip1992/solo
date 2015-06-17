@@ -10,7 +10,6 @@ angular.module('notes.note', [])
       $scope.edit = function (note) {
         var key = note.$id;
         var record = $scope.list.$getRecord(key);
-
         $scope.note = record;
       };
 

@@ -1,21 +1,36 @@
 <div ng-controller="NoteController">
 
-  <form class="form-horizontal">
+  <div class="col-md-4">
 
     <button class="btn" ng-click="addNote()">Add a Note</button>
 
-    Title: <input type="text" ng-model="note.title" placeholder="Enter Title" ng-change="list.$save(note)" ng-model-instant>
-    Note: <input type="text" ng-model="note.text" placeholder="Enter Text" ng-change="list.$save(note)" ng-model-instant>
+    <ul class="list-unstyled">
 
-  </form>
+      <li ng-click="edit(note)" ng-repeat="note in list">
+        <div>{{ note.title }}</div>
+      </li>
 
-  <ul class="list-unstyled">
+    </ul>
 
-    <li ng-click="edit(note)" ng-repeat="note in list">
-      <div>{{ note.title }}</div>
-      <div>{{ note.text }}</div>
-    </li>
+  </div>
 
-  </ul>
+  <div class="col-md-8">
+
+    <form class="">
+
+      <div class="noteTitle">
+        Title: <input type="text" ng-model="note.title" placeholder="Enter Title" ng-change="list.$save(note)" ng-model-instant>
+      </div>
+
+      <div class="noteText">
+        <textarea cols="125" rows="32" type="text" ng-model="note.text" placeholder="Enter Text" ng-change="list.$save(note)" ng-model-instant></textarea>
+      </div>
+
+
+    </form>
+
+  </div>
+
+
 
 </div>
